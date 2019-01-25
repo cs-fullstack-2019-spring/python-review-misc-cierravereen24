@@ -36,9 +36,11 @@ def exercise2_helper(num1, num2, num3, op):
     elif op == "Product":
                 return(num1*num2*num3)
     elif op == "Average":
-                return(num1 + num2 + num3 // 3)
+        # Because of order of operations, division performed before addition so you need to use parenthesis so
+        # numbers get added first, then divided by 3
+        return((num1 + num2 + num3) // 3)
     else:
-                print("Invalid Function")
+        print("Invalid Function")
 
     print(exercise2_helper(num1,num2, num3,op))
 
